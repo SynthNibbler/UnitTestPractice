@@ -45,3 +45,8 @@ TEST(PasswordTest, manyRepeated_case_password)
 	ASSERT_EQ(3, my_password.count_leading_characters("bbbf"));
 }
 
+TEST(PasswordTest, empty_input_password)
+{
+	Password my_password;
+	ASSERT_EQ(0, my_password.count_leading_characters(" "));
+}
